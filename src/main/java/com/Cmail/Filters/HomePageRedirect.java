@@ -29,14 +29,14 @@ public class HomePageRedirect implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 			HttpServletRequest request1=(HttpServletRequest)	request;
 		    String path=request1.getRequestURI();
-		   // System.out.println(path);
-		    if(path.equals("/GMail/Login.jsp")) {
+		    System.out.println(path);
+		    if(path.equals("//DummyGmail/Login.jsp")) {
 		    	chain.doFilter(request1, response);
 		    }else {
 		    	HttpSession session=request1.getSession(false);
-		    	System.out.println(" session : "+session+" "+session.getAttribute("userObject"));
+		    	System.out.println(" session : "+session);
 		    	if(session!=null) {
-		    		if(path.equals("/GMail/LoginController")) {
+		    		if(path.equals("/DummyGmail/LoginController")) {
 		    			chain.doFilter(request1, response);	
 		    		}
 		    		else if (session.getAttribute("userObject")==null) {

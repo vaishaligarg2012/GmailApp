@@ -5,13 +5,13 @@
          version="3.1">
          	      
 	        <display-name>Archetype Created Web Application</display-name>
-	        <listener>
+	        <!-- <listener>
 	        	<listener-class>com.Cmail.Listeners.RedirectToLoginCheck</listener-class>
 	        </listener>
 	        <listener>
 	        	<listener-class>com.Cmail.Listeners.SessionListnersHomeRedirect</listener-class>
 	        </listener>
-	        
+	         -->
 	      
 	      	     
 </web-app>

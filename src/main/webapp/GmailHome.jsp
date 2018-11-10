@@ -4,7 +4,7 @@
 
 <%@include file="Header.jsp"%>
 <script src="js/AllMails.js" type="text/javascript"></script>
-<body  onload="makeRequest()">
+<body onload="makeRequest()">
 <div class="container" >
 	<div class="row">
 		<div>${str}</div>
@@ -12,7 +12,7 @@
 	</div>
 	<hr />
 
-	<div class="row">
+ 	<div class="row">
 		<div class="col-sm-3 col-md-2">
 		
 				<a href="/GMail/composeMail.jsp"
@@ -30,7 +30,7 @@
 				</ul>
 			
 		</div>
-		<div class="col-sm-9 col-md-10">
+ 		<div class="col-sm-9 col-md-10">
 			<!-- Nav tabs -->
 
 			<ul class="nav nav-tabs">
@@ -38,8 +38,10 @@
 						class="glyphicon glyphicon-inbox"> </span>All Mail</a></li>
 			</ul>
 			<!-- Tab panes -->
-			<div class="tab-content">
-				<div class="tab-pane fade in active" id="home">
+			<div class="tab-content" >
+				
+				<div class="tab-pane fade in active" id="home" >
+				<%System.out.println("Hello "+request.getAttribute("SentMails")); %>
                  <c:forEach items="${SentMails}" var="pObj">
                  
 					<div class="list-group" style="margin-bottom:0px">
@@ -50,7 +52,7 @@
 					</div>
 				</c:forEach>
 					
-				</div>
+				</div> 
 
 			</div>
 		</div>

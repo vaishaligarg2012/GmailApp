@@ -43,6 +43,7 @@ function getReadyStateHandler(xmlHttpRequest) {
 		if (xmlHttpRequest.readyState == 4) {
 			if (xmlHttpRequest.status == 200) {
 				console.log(xmlHttpRequest);
+				console.log(xmlHttpRequest.responseText);
 				document.getElementById("home").innerHTML = xmlHttpRequest.responseText;
 			} else {
 				alert("HTTP error " + xmlHttpRequest.status + ": " + xmlHttpRequest.statusText);
